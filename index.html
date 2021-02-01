@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h2>Steam Market Value Calculator</h2>
+
+  <section class="container flex">
+    <input class="item flex-item-1" type="number" id="receive" name="receive" placeholder="You receive">
+    <input class="item flex-item-1" type="number" id="percentage" name="percentage" placeholder="Percentage (%)">
+    <p class="item ">=</p>
+    <input class="item flex-item-1" type="number" id="pays" name="pays" placeholder="Buyer pays" disabled="True">
+  </section>
+
+  <section class="container-button vertical-center horizontal-center">
+    <button type="button" id="Calculate" class="button" onClick="reply_click()">Calculate</button>
+  </section>
+
+  <p class="author">Douglas Kosvoski - 2021</p>
+
+  <script type="text/javascript">
+    function reply_click()
+    {
+      var receiveValue = parseFloat(document.getElementById("receive").value);
+      var percentageValue = parseFloat(document.getElementById("percentage").value);
+      var paysValue = receiveValue + (receiveValue*percentageValue);
+
+      document.getElementById("pays").value = paysValue.toFixed(2);
+    }
+
+  </script>
+</body>
