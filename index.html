@@ -6,8 +6,8 @@
   <h2>Steam Market Value Calculator</h2>
 
   <section class="container flex">
-    <input class="item flex-item-1" type="number" id="receive" name="receive" placeholder="You receive">
-    <input class="item flex-item-1" type="number" id="percentage" name="percentage" placeholder="Percentage (%)">
+    <input class="item flex-item-1" onchange="reply_click()" type="number" id="receive" name="receive" placeholder="You receive" autofocus>
+    <input class="item flex-item-1" type="number" id="percentage" name="percentage" value="0.15">
     <p class="item ">=</p>
     <input class="item flex-item-1" type="number" id="pays" name="pays" placeholder="Buyer pays" disabled="True">
   </section>
